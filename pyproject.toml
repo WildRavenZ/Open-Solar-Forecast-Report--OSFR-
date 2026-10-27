@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-solar-forecast-report"
+version = "0.1.0"
+description = "Hourly solar forecast reports from Open-Meteo data"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = [
+    "matplotlib",
+    "pandas",
+    "pvlib",
+    "requests",
+]
+
+[project.scripts]
+solar-report = "solar_report:main"
+
+[tool.setuptools]
+py-modules = ["solar_report"]
